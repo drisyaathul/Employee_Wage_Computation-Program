@@ -9,22 +9,23 @@ public class EmployeeWageComputation {
         Random random = new Random();
         int attendance = random.nextInt(3);
         int empWagePerHour = 20;
-        int fullDayHour = 8;
-        int partTimeHour = 4;
         int salaryPerDay;
-        int salaryPartTime;
+        int empHour = 0;
 
         System.out.println("Attendance = " + attendance);
 
-        salaryPerDay = attendance * fullDayHour * empWagePerHour;
-        salaryPartTime = partTimeHour * empWagePerHour;
-
-        if (attendance == 1) {
-            System.out.println("Employee Daily Wage = " + salaryPerDay);
-        } else if (attendance == 2) {
-            System.out.println("Employee Part-time Wage = " + salaryPartTime);
-        } else {
-            System.out.println("Employee Daily Wage = " + salaryPerDay);
+        switch (attendance) {
+            case 0:
+                empHour = 0;
+                break;
+            case 1:
+                empHour = 8;
+                break;
+            case 2:
+                empHour = 4;
+                break;
         }
+        salaryPerDay =  empHour * empWagePerHour;
+        System.out.println("Employee Salary per Day = "+salaryPerDay);
     }
 }
