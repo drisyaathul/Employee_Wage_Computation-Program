@@ -7,17 +7,24 @@ public class EmployeeWageComputation {
         System.out.println("** Welcome to Employee Wage Computation Program **");
 
         Random random = new Random();
-        int attendance = random.nextInt(2);
+        int attendance = random.nextInt(3);
         int empWagePerHour = 20;
-        int FullDayHour = 8;
+        int fullDayHour = 8;
+        int partTimeHour = 4;
         int salaryPerDay;
-        System.out.println("Attendance = "+attendance);
+        int salaryPartTime;
 
-        salaryPerDay = attendance*FullDayHour*empWagePerHour;
-        if(attendance == 1){
-            System.out.println("Employee Daily Wage = "+salaryPerDay);
-        }else {
-            System.out.println("Employee Daily Wage = "+salaryPerDay);
+        System.out.println("Attendance = " + attendance);
+
+        salaryPerDay = attendance * fullDayHour * empWagePerHour;
+        salaryPartTime = partTimeHour * empWagePerHour;
+
+        if (attendance == 1) {
+            System.out.println("Employee Daily Wage = " + salaryPerDay);
+        } else if (attendance == 2) {
+            System.out.println("Employee Part-time Wage = " + salaryPartTime);
+        } else {
+            System.out.println("Employee Daily Wage = " + salaryPerDay);
         }
     }
 }
