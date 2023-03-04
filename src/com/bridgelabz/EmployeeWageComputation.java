@@ -11,6 +11,8 @@ public class EmployeeWageComputation {
         int empWagePerHour = 20;
         int salaryPerDay;
         int empHour = 0;
+        int workingDays = 20;
+        int empMonthlyWage;
 
         System.out.println("Attendance = " + attendance);
 
@@ -25,7 +27,9 @@ public class EmployeeWageComputation {
                 empHour = 4;
                 break;
         }
-        salaryPerDay =  empHour * empWagePerHour;
-        System.out.println("Employee Salary per Day = "+salaryPerDay);
+        salaryPerDay = empHour * empWagePerHour;
+        System.out.println("Employee Salary per Day = " + salaryPerDay);
+        empMonthlyWage = salaryPerDay * workingDays;
+        System.out.println("Employee Monthly Wages = " + empMonthlyWage);
     }
 }
