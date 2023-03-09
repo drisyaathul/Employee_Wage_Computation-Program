@@ -7,8 +7,11 @@ public class EmployeeWageComputation {
     static final int empWagePerHour = 20;
     static final int maxWorkingHours = 100;
     static final int workingDays = 20;
-    public void ComputeEmployeeWage(){
-
+    public void ComputeEmployeeWage(String companyName, int empWagePerHour, int maxWorkingHours, int WorkingDays){
+        System.out.println("Name of the Company : "+companyName);
+        System.out.println("Employee Wage per Hour : "+empWagePerHour);
+        System.out.println("Maximum Working Hours per Month : "+maxWorkingHours);
+        System.out.println("Maximum Working Days per Month : "+WorkingDays);
 
         int salaryPerDay;
         int empHour = 0;
@@ -41,15 +44,18 @@ public class EmployeeWageComputation {
             System.out.println("Work Hours:"+empHour);
             System.out.println("Daily Wage = "+salaryPerDay);
         }
+        System.out.println("-----------------------");
+        System.out.println(companyName+ " Employee Total Wages for a month = "+totalWage);
         System.out.println("---------------------------------------------");
-        System.out.println("Employee Total Wages for a month = "+totalWage);
 
     }
     public static void main(String[] args) {
         System.out.println("** Welcome to Employee Wage Computation Program **");
 
-        EmployeeWageComputation employeeWage = new EmployeeWageComputation();
-        employeeWage.ComputeEmployeeWage();
+        EmployeeWageComputation company = new EmployeeWageComputation();
+        company.ComputeEmployeeWage("ABB",60,100,20);
+        company.ComputeEmployeeWage("Prestige",50,100,24);
+        company.ComputeEmployeeWage("L&T",45,120,24);
 
     }
 }
