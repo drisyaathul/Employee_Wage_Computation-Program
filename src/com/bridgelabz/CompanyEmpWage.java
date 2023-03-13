@@ -2,12 +2,12 @@ package com.bridgelabz;
 
 import java.util.Random;
 
-public class EmpWageBuilder {
+public class CompanyEmpWage {
     public int empWagePerHour = 20;
     public int maxWorkingHours = 100;
     public int workingDays = 20;
 
-    EmpWageBuilder(int workingDays, int maxWorkingHours, int empWagePerHour) {
+    CompanyEmpWage(int workingDays, int maxWorkingHours, int empWagePerHour) {
 
         this.workingDays = workingDays;
         this.maxWorkingHours = maxWorkingHours;
@@ -20,10 +20,10 @@ public class EmpWageBuilder {
         int totalWorkingHours = 0;
         int totalWage = 0;
 
-         Random random = new Random();
-         for (int day = 1; day <= workingDays; day++) {
-         int attendance = random.nextInt(3);
-         switch (attendance) {
+        Random random = new Random();
+        for (int day = 1; day <= workingDays; day++) {
+            int attendance = random.nextInt(3);
+            switch (attendance) {
                 case 0:
                     empHour = 0;
                     //System.out.println("Employee is absent");
@@ -36,15 +36,14 @@ public class EmpWageBuilder {
                     empHour = 4;
                     //System.out.println("Employee is Working Half-Day");
                     break;
-                }
+            }
 
-                salaryPerDay = empHour * empWagePerHour;
-                totalWorkingHours += maxWorkingHours;
-                totalWage += salaryPerDay;
-                    //System.out.println("Day:"+day);
-                    //System.out.println("Work Hours:"+empHour);
-                    //System.out.println("Daily Wage = "+salaryPerDay);
-         }
-            return totalWage;
+            salaryPerDay = empHour * empWagePerHour;
+            totalWorkingHours += maxWorkingHours;
+            totalWage += salaryPerDay;
         }
+        return totalWage;
     }
+}
+
+
