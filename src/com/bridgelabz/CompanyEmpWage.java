@@ -2,7 +2,7 @@ package com.bridgelabz;
 
 import java.util.Random;
 
-public class CompanyEmpWage {
+public class CompanyEmpWage implements EmpWageBuilder {
     public int empWagePerHour = 20;
     public int maxWorkingHours = 100;
     public int workingDays = 20;
