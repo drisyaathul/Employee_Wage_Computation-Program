@@ -40,6 +40,7 @@ public class CompanyEmpWage implements EmpWageBuilder {
             salaryPerDay = empHour * empWagePerHour;
             totalWorkingHours += maxWorkingHours;
             totalWage += salaryPerDay;
+            System.out.println("Day"+day+" Wage = "+salaryPerDay);
         }
         return totalWage;
     }
