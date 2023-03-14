@@ -37,7 +37,6 @@ public class CompanyEmpWage {
                     //System.out.println("Employee is Working Half-Day");
                     break;
             }
-
             salaryPerDay = empHour * empWagePerHour;
             totalWorkingHours += maxWorkingHours;
             totalWage += salaryPerDay;

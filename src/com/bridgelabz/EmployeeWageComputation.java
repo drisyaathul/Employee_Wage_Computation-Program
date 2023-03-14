@@ -1,17 +1,21 @@
 package com.bridgelabz;
 
+import java.util.ArrayList;
+
 public class EmployeeWageComputation {
-    public static CompanyEmpWage objectArray[] =new CompanyEmpWage[3];
+   // public static CompanyEmpWage objectArray[] =new CompanyEmpWage[3];
+    public static ArrayList<CompanyEmpWage> companyEmpWages = new ArrayList<CompanyEmpWage>();
     public static void main(String[] args) {
-        objectArray[0] = new CompanyEmpWage(20, 100, 60);
-        int employeeWageABB = objectArray[0].ComputeEmployeeWage();        //method calling
-        System.out.println("Monthly employee wage at ABB = " + employeeWageABB);
-        objectArray[1] = new CompanyEmpWage(24, 100, 50);
-        int employeeWagePrestige = objectArray[1].ComputeEmployeeWage();      //method calling
-        System.out.println("Monthly employee wage at Prestige = " + employeeWagePrestige);
-        objectArray[2] = new CompanyEmpWage(25, 110, 45);
-        int employeeWageTCS = objectArray[2].ComputeEmployeeWage();        //method calling
-        System.out.println("Monthly employee wage at TCS = " + employeeWageTCS);
+
+        companyEmpWages.add(new CompanyEmpWage(20, 100, 60));
+        int employeeWageABB=companyEmpWages.get(0).ComputeEmployeeWage();//method calling
+        System.out.println("Monthly Employee Wage At ABB : "+employeeWageABB);
+        companyEmpWages.add(new CompanyEmpWage(24,100,50));
+        int employeeWagePrestige = companyEmpWages.get(1).ComputeEmployeeWage();//method calling
+        System.out.println("Monthly Employee Wage At Prestige : "+employeeWagePrestige);
+        companyEmpWages.add(new CompanyEmpWage(25,110,45));
+        int employeeWageTCS = companyEmpWages.get(1).ComputeEmployeeWage();//method calling
+        System.out.println("Monthly Employee Wage At TCS : "+employeeWageTCS);
 
     }
 }
